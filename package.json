@@ -39,6 +39,7 @@
   "dependencies": {
     "@fluentui/react-components": "^9.46.8",
     "@fluentui/react-icons": "^2.0.232",
+    "@microsoft/office-js": "^1.1.94",
     "core-js": "^3.36.0",
     "es6-promise": "^4.2.8",
     "react": "^18.2.0",
@@ -51,7 +52,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.25",
-    "@types/office-js": "^1.0.377",
+    "@types/office-js": "^1.0.442",
     "@types/office-runtime": "^1.0.35",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
