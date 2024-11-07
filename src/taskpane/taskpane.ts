@@ -1,4 +1,4 @@
-import { insertText as insertTextInExcel } from "./excel";
+import { monitorCellAndSync } from "./excel";
 import { insertText as insertTextInOneNote } from "./onenote";
 import { insertText as insertTextInOutlook } from "./outlook";
 import { insertText as insertTextInPowerPoint } from "./powerpoint";
@@ -11,7 +11,7 @@ export async function insertText(text: string) {
   Office.onReady(async (info) => {
     switch (info.host) {
       case Office.HostType.Excel:
-        await insertTextInExcel(text);
+        await monitorCellAndSync();
         break;
       case Office.HostType.OneNote:
         await insertTextInOneNote(text);
