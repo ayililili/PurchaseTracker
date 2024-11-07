@@ -5,7 +5,7 @@ import { Button, Field, Textarea, tokens, makeStyles } from "@fluentui/react-com
 /* global HTMLTextAreaElement */
 
 interface TextInsertionProps {
-  insertText: (text: string) => void;
+  insertText: (text?: string) => void;
 }
 
 const useStyles = makeStyles({
