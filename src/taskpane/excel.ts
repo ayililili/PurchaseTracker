@@ -1,4 +1,4 @@
-/* global Excel console*/
+/* global Excel, console */
 
 export async function monitorCellAndSync() {
   try {
@@ -7,11 +7,15 @@ export async function monitorCellAndSync() {
       const sourceSheet: Excel.Worksheet = context.workbook.worksheets.getItem("Sheet1");
 
       // 設置工作表的變更事件監聽器
-      sourceSheet.onChanged.add(async (event) => {
-        console.log("123");
+      sourceSheet.onChanged.add(async (event: Excel.WorksheetChangedEventArgs) => {
+        console.log("Change detected in Sheet1");
+
         try {
-          // 確認變更的儲存格是 A1
+          // 確認變更的儲存格包含 A1
           if (event.address === "Sheet1!A1") {
+            console.log("Change detected in cell A1");
+
+            // 取得 A1 的範圍並加載其值
             const sourceRange = sourceSheet.getRange("A1");
             sourceRange.load("values"); // 加載變更值
             await context.sync();
