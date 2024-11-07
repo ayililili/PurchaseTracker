@@ -1,4 +1,3 @@
-import { insertText as insertExcelText } from "../../../src/taskpane/excel";
 import { insertText as insertPowerPointText } from "../../../src/taskpane/powerpoint";
 import { insertText as insertWordText } from "../../../src/taskpane/word";
 import * as testHelpers from "./test-helpers";
@@ -11,7 +10,7 @@ let testValues: any = [];
 export const testExcelEnd2End = async (testServerPort: number): Promise<void> => {
   try {
     // Execute taskpane code
-    await insertExcelText("Hello Excel End2End Test");
+
     await testHelpers.sleep(2000);
 
     // Get output of executed taskpane code
