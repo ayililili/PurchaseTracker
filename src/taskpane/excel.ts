@@ -8,6 +8,7 @@ export async function monitorCellAndSync() {
 
       // 設置工作表的變更事件監聽器
       sourceSheet.onChanged.add(async (event) => {
+        console.log("123");
         try {
           // 確認變更的儲存格是 A1
           if (event.address === "Sheet1!A1") {
